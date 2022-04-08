@@ -1,5 +1,5 @@
-from sortimage import ImageSorter
+from sortpixels import ImageSorter
 
-i = ImageSorter(filename="./sort-image/test-images/monalisa.jpeg")
+i = ImageSorter(filename="input.py")
 output = i.sortimage()
 output.save('./output.png')

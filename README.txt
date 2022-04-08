@@ -8,7 +8,7 @@ often looks like this::
 
     #!/usr/bin/env python
 
-    from sortimage import ImageSorter
+    from sortpixels import ImageSorter
 
     image = ImageSorter("input.png")
     new_image = image.sortimage()
