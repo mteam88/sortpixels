@@ -1,1 +1,1 @@
-from src.sortimage import ImageSorter
+from sortimage import ImageSorter
