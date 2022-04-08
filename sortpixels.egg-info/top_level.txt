@@ -1,2 +1,0 @@
-sortimage
-sortimage/test
