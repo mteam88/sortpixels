@@ -1,10 +1,10 @@
 from distutils.core import setup
 
 setup(
-    name='Sort-Image',
+    name='SortImage',
     version='0.1.0',
     author='Matthew Edelen',
-    packages=['sort-image', 'sort-image/test'],
+    packages=['sortimage', 'sortimage/test'],
     scripts=['main.py'],
     license='LICENSE.txt',
     description='Useful image sorter.',

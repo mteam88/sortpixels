@@ -4,7 +4,7 @@ from functools import reduce
 import logging
 
 class ImageSorter():
-    def __init__(self, filename="input.png", keyfunc=None):
+    def __init__(self, filename="input.png", keyfunc=sortimage):
         '''
         Initiates an ImageSorter object. 
         parameters:
