@@ -15,11 +15,11 @@ often looks like this::
     new_image.save("output.png")
 
 Documentation
-===========
+--------------
 
 You can see the documentation by checking out the docs/ directory included with this package. Enjoy!
 
 Contributors
-===========
+-------------
 
 1. Matthew Edelen (Gihub Username mteam88)

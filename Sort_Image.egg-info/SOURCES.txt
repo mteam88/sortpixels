@@ -3,6 +3,7 @@ LICENSE.txt
 MANIFEST.in
 README.txt
 main.py
+pyproject.toml
 setup.py
 Sort_Image.egg-info/PKG-INFO
 Sort_Image.egg-info/SOURCES.txt
