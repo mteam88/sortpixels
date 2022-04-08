@@ -1,4 +1,4 @@
 __pycache__
 output.py
 dist
-egg-info
+*.egg-info
