@@ -1,9 +1,19 @@
 from PIL import Image
 import numpy as np
 from functools import reduce
+import logging
 
 class ImageSorter():
-    def __init__(self, filename):
+    def __init__(self, filename="input.png", keyfunc=None):
+        '''
+        Initiates an ImageSorter object. 
+        parameters:
+        filename: path to a file, defaults to input.png, can be any file type supported by Pillow
+        keyfunc: defaults to sortimage(), should be a function that can be used in a sort method. 
+            it will be passed "pixel," a tuple of rgb values in the form (R, G, B). E.g: (127,3,12)
+            and it could return an integer. Check out the sort() method documentation to find out more.
+            The default sortimage keyfunc sorts the image by the sum of the rgb values.
+        '''
         self.filename = filename
         self.im = Image.open(filename)
         pixels = list(self.im.getdata())
@@ -26,8 +36,8 @@ class ImageSorter():
         self.pixels.sort(key=self._tuplesum)
 
     def _tuplesum(self, pixel):
-        #print(f"pixel: {pixel}")
-        #print(f"sum: {sum(list(pixel))}")
+        logging.info(f"pixel: {pixel}")
+        logging.info(f"sum: {sum(list(pixel))}")
         return sum(list(pixel))
     
     def _to_matrix(self, flatlist, rowl):

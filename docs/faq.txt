@@ -1,0 +1,5 @@
+Q: How do you use this package?
+A: Create a ImageSorter object and call methods on it.
+
+Q: What is the minimum viable implementation?
+A: See the bin/example.py file in the project directory.
