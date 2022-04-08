@@ -2,7 +2,7 @@ from distutils.core import setup
 
 setup(
     name='sortpixels',
-    version='0.1.2',
+    version='0.1.3',
     author='Matthew Edelen',
     packages=['sortpixels', 'sortpixels/test'],
     scripts=['bin/example.py'],

@@ -4,16 +4,18 @@ from functools import reduce
 import logging
 
 class ImageSorter():
-    def __init__(self, filename="input.png", keyfunc=sortimage):
+    def __init__(self, filename="input.png", keyfunc=None):
         '''
         Initiates an ImageSorter object. 
         parameters:
         filename: path to a file, defaults to input.png, can be any file type supported by Pillow
-        keyfunc: defaults to sortimage(), should be a function that can be used in a sort method. 
+        keyfunc: defaults to _tuplesum(), should be a function that can be used in a sort method. 
             it will be passed "pixel," a tuple of rgb values in the form (R, G, B). E.g: (127,3,12)
             and it could return an integer. Check out the sort() method documentation to find out more.
-            The default sortimage keyfunc sorts the image by the sum of the rgb values.
+            The default _tuplesum() keyfunc sorts the image by the sum of the rgb values.
         '''
+        if keyfunc == None:
+            self.keyfunc = self._tuplesum
         self.filename = filename
         self.im = Image.open(filename)
         pixels = list(self.im.getdata())
